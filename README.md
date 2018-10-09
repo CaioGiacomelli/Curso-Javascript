@@ -5,6 +5,6 @@ Link do resumo: https://docs.google.com/document/d/1Q0Gji_qFv4IfW74oMYA_oaULcslI
 
 Para o curso:
 
-    -> Instalar Node.js : https://nodejs.org/en/
-    -> Instalar VsCode : https://code.visualstudio.com/
+    -> Instalar Node.js: https://nodejs.org/en/
+    -> Instalar VsCode: https://code.visualstudio.com/
         -> Instalar o plugin Code Runner
