@@ -8,3 +8,4 @@ Para o curso:
     -> Instalar Node.js: https://nodejs.org/en/
     -> Instalar VsCode: https://code.visualstudio.com/
         -> Instalar o plugin Code Runner
+    -> Instalar na pasta do curso, a biblioteca lodash usando o comando 'npm i lodash'
