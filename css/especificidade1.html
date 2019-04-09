@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+
+        /*
+            Ordem de especificidade:
+            
+                1. Regra com !important
+                2. Seletores mais específicos
+                3. última regra processada (empate)
+        */
+
+        p {
+            background-color: #aaa;
+        }
+
+        /* Classe é mais específica que a tag p, por tanto prevalece */
+        .observacao {
+            background-color: #5f5;
+            border: dashed 5px;
+            padding: 200px !important; /* important burla a regra da especificidade */
+            font-size: 40px;
+        }
+
+        /* Mais específico ainda, pq é uma classe associada a uma tag, e prevalece */
+        p.observacao {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow)
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
