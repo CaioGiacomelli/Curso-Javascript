@@ -6,7 +6,46 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            display: flex; /* main axis por padrão, é o eixo da linha */
+            flex-direction: column; 
+            flex-direction: column-reverse; /* usa o main axis como coluna, mas invertou a ordem dos elementos como foram definidos no html */
+            flex-direction: row-reverse; /* alem de inverter a ordem, fica como se fosse um float right */
+            flex-direction: row;
+            width: 50%; /*o container passa a ter 50%, mas os flex items n levam em consideração isso */
+            flex-wrap: wrap; /* Para lidar com overflow */
+            flex-wrap: wrap-reverse;
+            flex-flow: row wrap;
+            height: 200px;
+            flex-flow: column-reverse wrap; /* mistura wrap e direction */
+            flex-flow: row wrap;
+
+            justify-content: flex-start; /* justificar conteudo com base no start/end que é relacionado com o main axis */
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around; /* essa propriedade deixa bem uniforme o conteudo */
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            /* Cross Axis */
+            height: 400px;
+            align-items: stretch;
+            align-items: baseline; /* alinha os items pela baseline */
+            align-items: flex-start; /* aqui usam o cross-axis start e end */
+            align-items: flex-end;
+            align-items: center;
+
+            /* mais de uma linha */
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
     </style>
 </head>
 
@@ -22,6 +61,7 @@
         <div class="tag nolabel">8</div>
         <div class="tag nolabel">9</div>
         <div class="tag nolabel">10</div>
+        <div class="tag nolabel">11</div>
     </div>
     <script src="js/tag.js"></script>
 </body>

@@ -22,6 +22,42 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            grid-template-columns: repeat(4, 8.33%);
+            grid-template-columns: repeat(11, 100px) 100px; /* define a quantidade de colunas e seu tamanho, nesse caso terao 12 colunas, com 100px */
+            /* minmax(100px, 300px), dependendo dos outros elementos ela navega entre esse intervalo */
+            grid-template-columns: 200px 20% 1fr; /* 3 columnas, a primeira tem 200px, a segunda tem 20%, a terceira pega 1 fragmento do q sobrou */
+            grid-template-columns: 3fr 6fr 3fr;
+
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr; /* usa 100px pra 1 linha, 1fr pra segunda, e as outras linhas pegam oq sobram */
+            grid-template-rows: 100px auto auto auto; /* o que resta, divide de forma igualitaria */
+        }
+
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-column-end: span 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+        }
+
+        .d10, .d11{
+            /* podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            z-index: 10; /* profundidade dos elementos, quem fica na frente de quem */
+        }
     </style>
 </head>
 
