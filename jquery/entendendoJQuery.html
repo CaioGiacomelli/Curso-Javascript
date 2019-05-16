@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        $('div').hide(5000) // Pega todas as divs, e esconde os elementos, demora 5 segundos de animação para esconder
+                .show(5000) // Reaparece as divs, demorando 5s
+                .fadeOut(5000) // vai apagando, demora 5s
+                // vai encadeando as chamadas. O retorno são objetos decorados, não são nós da DOM
+        
+        console.log($('div').get(0)); //peguei o primeiro elemento, a primeira div    
+        console.log($.isEmptyObject({})) // dolar como objeto, função utilitária 
+        console.log(jQuery.inArray(3, [1, 2, 3])); //outra maneira de usar jQuery, com o proprio nome 
+
+        $.fn.fundoVerde = function() { //extendendo o jQuery
+            this.css('background-color', 'green')
+            return this //faz ela ser possivelmente encadeada
+        }
+        $('body').fundoVerde().fadeOut(1000)
+    </script>
+</body>
